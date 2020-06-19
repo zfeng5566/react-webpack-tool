@@ -3,7 +3,7 @@
  * @Author: wangzhijie01
  * @LastEditors: wangzhijie01
  * @Date: 2020-06-17 17:24:04
- * @LastEditTime: 2020-06-19 18:32:09
+ * @LastEditTime: 2020-06-19 19:34:53
  */
 
 const path = require('path');
@@ -18,7 +18,6 @@ function absPath(pathString) {
     return path.resolve(__dirname, pathString);
 
 }
-console.log(2222222222)
 console.log('1', absPath('../src/pages/index.js'));
 module.exports = {
     mode: "development",
@@ -34,6 +33,13 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.(js|jsx)$/,
+                use:[
+                    'reac'
+                ]
+
+            },
             {
                 test: /\.css$/,
                 use: [
@@ -56,11 +62,28 @@ module.exports = {
                         loader: "sass-loader" // 将 Sass 编译成 CSS
                     }
                 ]
+            },
+            {
+                test: /\.less$/,
+                use: [
+                    {
+                        loader: "style-loader" // 将 JS 字符串生成为 style 节点
+                    },
+                    {
+                        loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+                    },
+                    {
+                        loader: "less-loader" // 将 less 编译成 CSS
+                    }
+                ]
             }
         ]
     },
     plugins: [
         // 自动生成一个html文件，并且包含了编译后的js文件
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            //使用自定义html模板
+            template: absPath('../src/html/index.html')
+        })
     ]
 }

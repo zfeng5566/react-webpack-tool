@@ -1,0 +1,51 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add sass-loader node-sass webpack --save-dev
+
+PATH: 
+  D:\apps\cmder\bin;D:\apps\cmder\vendor\bin;D:\apps\cmder\vendor\conemu-maximus5\ConEmu\Scripts;D:\apps\cmder\vendor\conemu-maximus5;D:\apps\cmder\vendor\conemu-maximus5\ConEmu;D:\apps\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Users\wangzhijie01\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Python27;C:\Program Files\dotnet\;C:\Users\wangzhijie01\AppData\Local\Microsoft\WindowsApps;D:\apps\WebStorm 2019.1.2\bin;C:\Users\wangzhijie01\AppData\Roaming\nvm;C:\Program Files\nodejs;D:\apps\Microsoft VS Code\bin;C:\Users\wangzhijie01\AppData\Local\BypassRuntm;D:\apps\WebStorm 2019.2.4\bin;D:\applications\fiddler;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;D:\apps\cmder
+
+Yarn version: 
+  1.21.0
+
+Node version: 
+  8.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect ETIMEDOUT 104.16.17.35:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1191:14)
+
+npm manifest: 
+  {
+    "name": "react-webpack-tool",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "webpack --config webpackConfig/config.prod.js",
+      "build:dev": "webpack --mode development --config webpackConfig/config.prod.js"
+    },
+    "keywords": [
+      "react",
+      "webpack",
+      "framework"
+    ],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "css-loader": "^3.6.0",
+      "html-webpack-plugin": "^4.3.0",
+      "style-loader": "^1.2.1",
+      "webpack": "^4.43.0",
+      "webpack-cli": "^3.3.11"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

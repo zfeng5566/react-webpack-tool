@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --color",
+    "start": "webpack-dev-server --open --color --config webpackConfig/config.dev.js",
     "build": "webpack --config webpackConfig/config.prod.js",
     "build:dev": "webpack --mode development --config webpackConfig/config.prod.js"
   },
@@ -17,8 +17,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-react": "^7.10.1",
     "css-loader": "^3.6.0",
     "html-webpack-plugin": "^4.3.0",
+    "less-loader": "^6.1.1",
     "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
@@ -27,6 +29,8 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "cross-spawn": "^7.0.3"
+    "cross-spawn": "^7.0.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
