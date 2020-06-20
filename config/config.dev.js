@@ -1,9 +1,9 @@
 /*
  * @Description: created by wangzhijie
  * @Author: wangzhijie01
- * @LastEditors: wangzhijie01
+ * @LastEditors: wangzhijie
  * @Date: 2020-06-17 17:24:04
- * @LastEditTime: 2020-06-19 19:34:53
+ * @LastEditTime: 2020-06-20 23:47:09
  */
 
 const path = require('path');
@@ -31,12 +31,27 @@ module.exports = {
         contentBase: absPath('../'),
         hot: true
     },
+    resolve: {
+        // 资源默认扩展名.
+        extensions: [".ts", ".tsx", ".js", '.jsx']
+    },
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                use:[
-                    'reac'
+                use: [
+                    {
+                        loader: "babel-loader"
+                    }
+                ]
+
+            },
+            {
+                test: /\.(ts|tsx)$/,
+                use: [
+                    {
+                        loader: "ts-loader"
+                    }
                 ]
 
             },

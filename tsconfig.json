@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "allowSyntheticDefaultImports": true,
+        "allowJs": true,
+        "jsx": "react",
+        "watch": true,
+        "module": "commonjs",
+        "sourceMap": true,
+        "target": "es5",
+        "esModuleInterop": true
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
