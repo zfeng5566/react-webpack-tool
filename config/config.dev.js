@@ -3,13 +3,14 @@
  * @Author: wangzhijie01
  * @LastEditors: wangzhijie
  * @Date: 2020-06-17 17:24:04
- * @LastEditTime: 2020-06-20 23:47:09
+ * @LastEditTime: 2020-06-21 16:32:28
  */
 
 const path = require('path');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-
+console.log('11111111111')
+console.log(process.env.NODE_ENV)
 /**
  * 返回一个绝对路径
  * @param {string} pathString 路径 
@@ -29,7 +30,8 @@ module.exports = {
     },
     devServer: {
         contentBase: absPath('../'),
-        hot: true
+        hot: true, // 启用热更新
+        historyApiFallback: true // 明白页面使用的history路由，切换之后不会引起webpack误会，以为是在跳转页面回返回404页面
     },
     resolve: {
         // 资源默认扩展名.
