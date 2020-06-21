@@ -3,7 +3,7 @@
  * @Author: wangzhijie01
  * @LastEditors: wangzhijie
  * @Date: 2020-06-17 17:24:04
- * @LastEditTime: 2020-06-21 16:32:28
+ * @LastEditTime: 2020-06-21 21:01:31
  */
 
 const path = require('path');
@@ -91,6 +91,14 @@ module.exports = {
                     },
                     {
                         loader: "less-loader" // 将 less 编译成 CSS
+                    }
+                ]
+            },
+            {
+                test: /\.(png|jpg|gif|jpeg|bmp)$/,
+                use: [
+                    {
+                        loader: "file-loader"
                     }
                 ]
             }

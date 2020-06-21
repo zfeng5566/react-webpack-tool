@@ -2,6 +2,8 @@ import React from 'react';
 
 import list from './list.json';
 
+import iconTimg from './timg.jpg';
+
 export default class About extends React.PureComponent<{}, {}>{
     render(): React.ReactNode {
         return <div>
@@ -9,6 +11,9 @@ export default class About extends React.PureComponent<{}, {}>{
             {
                 list.a
             }
+            <div>
+                <img src={iconTimg}></img>
+            </div>
         </div>
     }
 }
