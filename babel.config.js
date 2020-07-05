@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Date: 2020-06-20 23:17:43
+ * @Author: wangzhijie
+ * @LastEditors: wangzhijie
+ * @LastEditTime: 2020-07-04 23:36:33
+ */ 
 /**
  * Babel 是一个工具链，主要用于将 ECMAScript 2015+ 版本的代码转换为向后兼容的 JavaScript 语法，
  * 以便能够运行在当前和旧版本的浏览器或其他环境中。下面列出的是 Babel 能为你做的事情：
@@ -17,7 +24,8 @@ module.exports = {
             "@babel/preset-env",
             {
                 // ES6语法转换成通用模块
-                modules: "umd"
+                modules: "umd",
+                useBuiltIns:"usage"
             }
 
         ]

@@ -3,14 +3,12 @@
  * @Author: wangzhijie01
  * @LastEditors: wangzhijie
  * @Date: 2020-06-17 17:24:04
- * @LastEditTime: 2020-06-21 21:46:57
+ * @LastEditTime: 2020-07-04 11:28:53
  */
 
 const path = require('path');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-console.log('11111111111')
-console.log(process.env)
 /**
  * 返回一个绝对路径
  * @param {string} pathString 路径 
@@ -20,11 +18,9 @@ function absPath(pathString) {
 
 }
 console.log('1', absPath('../src/pages/index.js'));
+console.log(process.env.NODE_ENV)
 module.exports = {
     // 文件路径别名
-    alias:{
-
-    },
     mode: "development",
     entry: absPath('../src/pages/index.js'),
     devtool: 'inline-source-map',
